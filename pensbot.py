@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
+import os
 import discord
 import asyncio
+import configparser
 
 client = discord.Client()
 
@@ -27,5 +29,7 @@ async def on_message(message):
         await client.send_message(message.channel, 'Done sleeping')
 
 
+config = configparser.ConfigParser()
+config.read(os.path.expanduser('~/.discord/credentials.ini'))
 
-client.run('haha-you-dummy')
+client.run(config['DEFAULT']['token'])
