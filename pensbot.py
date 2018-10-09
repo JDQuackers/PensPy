@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import discord
 import asyncio
 
@@ -24,7 +26,6 @@ async def on_message(message):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
 
-@client.event
 
 
-client.run('NDk5MDMwNDY5MzUwNzg1MDI1.Dp2yRA.lybWbBqM3nRAucgfQBPEW-r0xxg')
+client.run('haha-you-dummy')
